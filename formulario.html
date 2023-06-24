@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulário de Cadastro</title>
+  <link rel="stylesheet" type="text/css" href="formulario.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Formulário de Cadastro</h1>
+    <form action="#" method="post">
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email"  placeholder="E-mail">
+      </div>
+      <div class="form-group">
+        <label for="password">Senha de Acesso:</label>
+        <input type="password" id="password" name="password" required placeholder="Senha">
+      </div>
+      <div class="form-group">
+        <label for="phone">Celular:</label>
+        <input type="tel" id="phone" name="phone" required placeholder="(DDD) 99999-9999">
+      </div>
+      <div class="form-group">
+        <label for="fullname">Nome Completo:</label>
+        <input type="text" id="fullname" name="fullname" required>
+      </div>
+      <div class="form-group">
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf" pattern="[0-9]{11}" maxlength="11" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required placeholder="Seu CPF">
+      </div>
+      <div class="form-group-date">
+        <label for="dob">Data de Nascimento:</label>
+        <input type="date" id="dob" name="dob" required>
+      </div>
+      <div class="form-group"> <!--grup sexo--> 
+        <label for="gender">Sexo:</label>
+        <select id="gender" name="gender" required>
+            <option value="">Selecione</option>
+            <option value="M">Masculino</option>
+            <option value="F">Feminino</option>
+            <option value="O">Outro</option>
+        </select>
+    </div>
+    <div class="form-group"> <!--grup estados-->
+      <label for="estado">Estado:</label>
+      <select id="estado" name="estado" required>
+        <optgroup label="Região Norte">
+          <option value="AC">Acre</option>
+          <option value="AP">Amapá</option>
+          <option value="AM">Amazonas</option>
+          <option value="PA">Pará</option>
+          <option value="RO">Rondônia</option>
+          <option value="RR">Roraima</option>
+          <option value="TO">Tocantins</option>
+        </optgroup>
+        <optgroup label="Região Nordeste">
+          <option value="AL">Alagoas</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="MA">Maranhão</option>
+          <option value="PB">Paraíba</option>
+          <option value="PE">Pernambuco</option>
+          <option value="PI">Piauí</option>
+          <option value="RN">Rio Grande do Norte</option>
+          <option value="SE">Sergipe</option>
+        </optgroup>
+        <optgroup label="Região Centro-Oeste">
+          <option value="DF">Distrito Federal</option>
+          <option value="GO">Goiás</option>
+          <option value="MT">Mato Grosso</option>
+          <option value="MS">Mato Grosso do Sul</option>
+        </optgroup>
+        <optgroup label="Região Sudeste">
+          <option value="ES">Espírito Santo</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="SP">São Paulo</option>
+        </optgroup>
+        <optgroup label="Região Sul">
+          <option value="PR">Paraná</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="SC">Santa Catarina</option>
+        </optgroup>
+      </select>
+    </div>
+    <div class="form-group">
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade" readonly>
+      </div>
+    <div class="form-group">
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" name="cep" pattern="[0-9]*" inputmode="numeric" title="Digite apenas números" maxlength="8" required>
+    </div>
+      <div class="form-group">
+        <label for="logradouro">Rua:</label>
+        <input type="text" id="Rua" name="Rua" readonly>
+      </div>
+      <div class="form-group">
+        <label for="bairro">Bairro:</label>
+        <input type="text" id="bairro" name="bairro" readonly>
+    </div>
+   
+      <div class="form-group">
+        <label for="numero">Número da Casa:</label>
+        <input type="text" id="numero" name="numero" pattern="[0-9]*" inputmode="numeric" title="Digite apenas números" maxlength="4" required>
+      </div>
+      
+      <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

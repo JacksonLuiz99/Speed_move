@@ -10,4 +10,10 @@ document.addEventListener('DOMContentLoaded', function() {
       // Por exemplo, você pode exibir uma mensagem de sucesso ou erro para o usuário.
     });
   });
+
+  const cepInput = document.getElementById('cep');
+  cepInput.addEventListener('input', function () {
+    this.value = this.value.replace(/[^0-9]/g, '').slice(0, 8);
+  });
+
   
