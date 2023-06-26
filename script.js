@@ -1,4 +1,4 @@
-/*document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function() {
     var requestRideButton = document.getElementById('request-ride');
   
     requestRideButton.addEventListener('click', function() {
@@ -15,5 +15,5 @@
   cepInput.addEventListener('input', function () {
     this.value = this.value.replace(/[^0-9]/g, '').slice(0, 8);
   });
-*/
+
   
